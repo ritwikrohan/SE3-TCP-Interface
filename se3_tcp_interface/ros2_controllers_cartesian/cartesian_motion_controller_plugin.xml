@@ -1,0 +1,9 @@
+<library path="cartesian_motion_controller">
+  <class name="assignment9_controller/CartesianMotionController"
+	 type="assignment9_controller::CartesianMotionController"
+	 base_class_type="controller_interface::ControllerInterface">
+    <description>
+      Cartesian Motion Controller.
+    </description>
+  </class>
+</library>

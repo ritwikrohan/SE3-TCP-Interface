@@ -1,0 +1,19 @@
+<library path="se3_driver_plugin">
+
+    <class name="assignment7_sensor_hardware/SE3HardwareInterface"
+           type="assignment7_sensor_hardware::SE3HardwareInterface"
+           base_class_type="hardware_interface::SensorInterface">
+        <description>
+            SensorInterface for SE3 sensor (Assignment 7) - Redundant here
+        </description>
+    </class>
+
+    <class name="assignment7_sensor_hardware/SE3HardwareInterface"
+           type="assignment7_sensor_hardware::SE3HardwareInterface"
+           base_class_type="ign_ros2_control::IgnitionSystemInterface">
+        <description>
+            SensorInterface for SE3 sensor (Assignment 8) - Supports Ignition
+        </description>
+    </class>
+
+</library>

@@ -1,0 +1,26 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    tool_sensor_pose_broadcaster:
+      type: pose_broadcaster/PoseBroadcaster
+
+    target_sensor_pose_broadcaster:
+      type: pose_broadcaster/PoseBroadcaster
+
+    cartesian_motion_controller:
+         type: CartesianMotionController
+
+tool_sensor_pose_broadcaster:
+  ros__parameters:
+      frame_id: sensor_frame 
+      pose_name: tool_sensor
+      tf.enable: true
+      tf.child_frame_id: tool_sensor_pose
+
+target_sensor_pose_broadcaster:
+  ros__parameters:
+      frame_id: sensor_frame 
+      pose_name: target_sensor
+      tf.enable: true 
+      tf.child_frame_id: target_sensor_pose

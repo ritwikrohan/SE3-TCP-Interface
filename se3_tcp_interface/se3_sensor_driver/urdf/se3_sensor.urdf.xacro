@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="se3_sensor">
+
+    <xacro:arg name="ip_address" default="127.0.0.1"/>
+    <xacro:include filename="$(find se3_sensor_driver)/urdf/se3_sensor.xacro"/>
+    <xacro:se3_sensor control_name="sensor_control" ip_address="$(arg ip_address)"/>
+
+
+</robot>

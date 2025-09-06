@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- Reference github.com/ros-controls/ros2_control_demos/blob/humble/example_5/description/ros2_control/external_rrbot_force_torque_sensor.ros2_control.xacro -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+    <xacro:macro name="se3_sensor" params="control_name ip_address">
+        <ros2_control name="${control_name}" type="sensor">
+            <hardware>
+                <plugin>assignment7_sensor_hardware/SE3HardwareInterface</plugin> 
+                <param name="sensor_id">tool_target_sensor_id</param>
+                <param name="ip_address">${ip_address}</param>
+            </hardware>
+
+            <sensor name="tool_sensor">
+            <state_interface name="position.x"/>
+            <state_interface name="position.y"/>
+            <state_interface name="position.z"/>
+            <state_interface name="orientation.x"/>
+            <state_interface name="orientation.y"/>
+            <state_interface name="orientation.z"/>
+            <state_interface name="orientation.w"/>
+            <param name="sensor_id">tool_sensor_id</param>
+            </sensor>
+
+            <sensor name="target_sensor">
+            <state_interface name="position.x"/>
+            <state_interface name="position.y"/>
+            <state_interface name="position.z"/>
+            <state_interface name="orientation.x"/>
+            <state_interface name="orientation.y"/>
+            <state_interface name="orientation.z"/>
+            <state_interface name="orientation.w"/>
+            <param name="sensor_id">target_sensor_id</param>
+            </sensor>
+        </ros2_control>
+    </xacro:macro>
+
+</robot>
